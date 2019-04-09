@@ -1,9 +1,10 @@
 function copyArea(textArea){
-  const dt = new Date()
-  const dtStr = dt.toLocaleString()
+	const dt = new Date()
+	const dateStr = dt.toLocaleDateString()
+	const timeStr = dt.toLocaleTimeString('en-US', {hour12:false})
 	const txtStr = document.getElementById(textArea).value
-  str = `[${dtStr}] : ${txtStr}`
-  copyText(str)
+	str = `${timeStr}, ${dateStr} ${txtStr}`
+	copyText(str)
 }
 
 function clearArea(textArea){
